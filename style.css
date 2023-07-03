@@ -1,0 +1,103 @@
+  body {
+      font-family: arial, sans-serif;
+
+    }
+
+    h1 {
+      color: #878787;
+      font-size: 24px;
+      font-weight: 100;
+      line-height: 28px;
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 19px;
+    }
+
+    li:first-letter {
+      text-transform: capitalize;
+    }
+
+
+    .weather-app {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #a1caff;
+      border-radius: 5px;
+    }
+
+    .cityDate {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .weather-temperature img {
+      height: 64px;
+      width: 64px;
+    }
+
+    .weather-temperature strong {
+      font-size: 64px;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .weather-temperature .units {
+      position: relative;
+      font-size: 16px;
+      top: -34px;
+    }
+
+    .weather-temperature .active {
+      color: rgb(33, 33, 33);
+      cursor: default;
+    }
+
+    .weather-temperature .active:hover {
+      text-decoration: none;
+    }
+
+    .nextDays {
+      margin-top: 20px;
+      text-align: center;
+      color: #000;
+    }
+
+    h1 {
+      text-align: center;
+      text-decoration: wavy;
+    }
+
+.weather-temperature{
+  display: flex;
+  justify-content: space-evenly;
+}
+.row{
+  display: flex;
+  justify-content: space-evenly;
+};
+    .nextDays-date {
+      font-size: 16px;
+      opacity: 0.5;
+    }
+    .nextDays-temperature-min {
+      opacity: 0.5;
+    }
+    .nextDays-temperatures {
+      font-size: 13px;
+    }
