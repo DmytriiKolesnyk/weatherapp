@@ -4,11 +4,10 @@
     }
 
     h1 {
-      color: #878787;
       font-size: 24px;
-      font-weight: 100;
+    text-align: center;
       line-height: 28px;
-      margin-bottom: 0;
+      margin-bottom: 28px;
     }
 
     ul {
@@ -21,7 +20,6 @@
       margin: 0;
       padding: 0;
       font-size: 16px;
-      font-weight: 100;
       line-height: 19px;
     }
 
@@ -63,24 +61,9 @@
       top: -34px;
     }
 
-    .weather-temperature .active {
-      color: rgb(33, 33, 33);
-      cursor: default;
-    }
-
-    .weather-temperature .active:hover {
-      text-decoration: none;
-    }
-
-    .nextDays {
+   .nextDays {
       margin-top: 20px;
       text-align: center;
-      color: #000;
-    }
-
-    h1 {
-      text-align: center;
-      text-decoration: wavy;
     }
 
 .weather-temperature{
