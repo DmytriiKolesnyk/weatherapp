@@ -1,39 +1,3 @@
-function displayForecast(response) {
-    let forecast = response.data.daily;
-
-    let forecastElement = document.querySelector("#forecast");
-
-    let forecastHTML = `<div class="row">`;
-    forecast.forEach(function (forecastDay, index) {
-      if (index < 6) {
-        forecastHTML =
-          forecastHTML +
-          `
-    <div class="col-2">
-      <div class="nextDays-date">${formatDay(forecastDay.dt)}</div>
-      <img
-        src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon
-          }@2x.png"
-        alt=""
-        width="42"
-      />
-      <div class="nextDays-temperatures">
-        <span class="nextDays-temperature-max"> ${Math.round(
-            forecastDay.temp.max
-          )}° </span>
-        <span class="nextDays-temperature-min"> ${Math.round(
-            forecastDay.temp.min
-          )}° </span>
-      </div>
-    </div>
-`;
-      }
-    });
-
-    forecastHTML = forecastHTML + `</div>`;
-    forecastElement.innerHTML = forecastHTML;
-  }
-
   function getForecast(coordinates) {
     let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
@@ -80,6 +44,41 @@ function displayForecast(response) {
 
   let form = document.querySelector("#search-form");
   form.addEventListener("submit", handleSubmit);
+function displayForecast(response) {
+    let forecast = response.data.daily;
+
+    let forecastElement = document.querySelector("#forecast");
+
+    let forecastHTML = `<div class="row">`;
+    forecast.forEach(function (forecastDay, index) {
+      if (index < 6) {
+        forecastHTML =
+          forecastHTML +
+          `
+    <div class="col-2">
+      <div class="nextDays-date">${formatDay(forecastDay.dt)}</div>
+      <img
+        src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon
+          }@2x.png"
+        alt=""
+        width="42"
+      />
+      <div class="nextDays-temperatures">
+        <span class="nextDays-temperature-max"> ${Math.round(
+            forecastDay.temp.max
+          )}° </span>
+        <span class="nextDays-temperature-min"> ${Math.round(
+            forecastDay.temp.min
+          )}° </span>
+      </div>
+    </div>
+`;
+      }
+    });
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+  }
 
   search("Kropyvnytskyi");
 
